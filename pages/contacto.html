@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Barbarians Contacto</title>
+    <link rel="shortcut icon" href="../assets/img/iconoPeque.png" type="image/x-icon">
+    <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+    <header>
+        <div class="techo">
+            <img class="techoHacha" src="../assets/img/A.png" alt="techoHacha">
+            <img class="escudo" src="../assets/img/Escudo1.png" alt="escudo">
+            <div class="techoTitulos"> 
+                <h1>BARBARIANS</h1>
+                <h2> FOOTBALL AMERICANO - URUGUAY</h2>   
+            </div>
+            <img class="techoB" src="../assets/img/B.png" alt="">
+        </div>
+    </header>
+    <main class="base">
+        <nav class="navbar">
+            <ul>
+                <li><a href="../index.html">Inicio</a></li>
+                <li><a href="./nosotros.html">Nosotros</a></li>
+                <li><a href="./contacto.html">Contacto</a></li>
+                <li><a href="./partidos.html">Partidos</a></li>
+                <li><a href="./ubicacion.html">Ubicacion</a></li>
+            </ul>
+        </nav>
+        <div class="contactos">
+            <h3 class="tituloFormulario">COMPLETA EL FORMULARIO QUE TE CONTACTAMOS</h3>
+            <div class="cajaFormulario">
+                <form action="" method="get"></form>
+                <label for="nombre">NOMBRE</label>
+                <input type="text" name="NOMBRE" id="nombre" placeholder="ingrese su nombre" required>
+                <br>
+                <label for="apellido">APELLIDO</label>
+                <input type="text" name="apellido" id="apellido" placeholder="ingrese su apellido">
+                <br>
+                <label for="telefono">TELEFONO - CELULAR</label>
+                <input type="number" name="telefono" id="telefono" placeholder="fijo o celular" required>
+                <br>
+                <label for="documento">TIPO DE DOCUMENTO</label>
+                <select name="documento">
+                    <option value="cedula">nro. de cédula</option>
+                    <option value="dni">DNI</option>
+                    <option value="pasaporte">pasaporte</option>
+                    <option value="otro">otro</option>
+                </select>
+                <input type="number" name="documento" id="documento" placeholder="ingrese su nro. de documento" required>
+                <br>
+                <label for="email">CORREO ELECTRONICO:</label>
+                <input type="email" name="mail" id="mail" placeholder="ingrese su correo electronico" required>
+                <br>
+                <fieldset>
+                    <legend>GÉNERO</legend>
+                    <div>
+                        <label for="genero">Hombre</label>
+                        <input type="radio" name="sexo" value="hombre">
+                        <label for="genero">Mujer</label>
+                        <input type="radio" name="sexo" value="mujer" >
+                        <label for="genero">No binario</label>
+                        <input type="radio" name="sexo" value="no binario">
+                    </div>
+                </fieldset>
+                <br>
+                <div>
+                    <label for="Seleccion">Selecciona el equipo al que quieres unirte</label>
+                    <select name="Seleccion">
+                        <option value="Barbarians">Barbarians</option>
+                        <option value="Valkirias">Valkirias</option>
+                    </select>
+                </div>
+                <br>
+                <textarea name="comentarios" id="" cols="30" rows="10" placeholder="contanos que querés saber, en que te podemos ayudar" ></textarea>
+                <br>
+                <div>
+                    <label for="file">Adjunta si quieres un archivo: </label>
+                    <input type="file" name="file" id="file">
+                </div>
+                <br>
+                <label for="acepta terminos y condiciones"> Acepta terminos y condiciones </label>
+                <input type="checkbox" name="acepto" value="si" required>
+                <br>
+                <div class="botonesFormulario">
+                    <input type="submit" value="Enviar">
+                    <input type="reset" value="Reiniciar">
+                </div>
+            </div>
+            <section class="unetenos">
+                <img src="../assets/img/sumate.jpg" alt="sumateUno">
+                <img src="../assets/img/sumate2.jpg" alt="sumateDos">
+            </section>
+        </div>
+    </main>
+    <footer>
+        <h5>© FERBI 2022, Todos los derechos reservados.</h5>
+    </footer>
+</body>
+</html>
