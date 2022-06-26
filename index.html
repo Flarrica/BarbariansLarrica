@@ -6,18 +6,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Barbarians Inicio</title>
     <link rel="shortcut icon" href="./assets/img/iconoPeque.png" type="image/x-icon">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 <body>
     <header>
         <div class="techo">
-            <img class="techoHacha" src="./assets/img/A.png" alt="imagenHacha">
+            <img data-aos="fade-right" class="techoHacha" src="./assets/img/A.png" alt="imagenHacha">
             <img data-aos="zoom-in" class="escudo" src="./assets/img/Escudo1.png" alt="escudo">
             <div class="techoTitulos"> 
                 <h1>BARBARIANS</h1>
                 <h2> FOOTBALL AMERICANO-URUGUAY</h2>   
             </div>
-            <img class="techoB" src="./assets/img/B.png" alt="ImagenB">
+            <img data-aos="fade-left" class="techoB" src="./assets/img/B.png" alt="ImagenB">
         </div>
 
     </header>
@@ -48,5 +49,9 @@
         <footer>
         <h5>© FERBI 2022, Todos los derechos reservados.</h5>
     </footer>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
 </body>
 </html>
