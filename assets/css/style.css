@@ -294,6 +294,12 @@ footer h5{
         flex-direction: row;
     }
 
+    /* pagina Ubicación*/
+
+    .tituloUbicacion h3{
+        font-size: 20px;
+    }
+
 }
 
 /* display grandes*/
@@ -360,6 +366,11 @@ footer h5{
                             "cajaFormulario   cajaFormulario   cajaFormulario   unetenos"
                             "cajaFormulario   cajaFormulario   cajaFormulario   unetenos";
     }
+        /* pagina Ubicación*/
+    
+        .tituloUbicacion h3{
+            font-size: 25px;
+        }
 }
 
 
