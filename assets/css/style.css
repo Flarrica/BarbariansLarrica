@@ -20,11 +20,11 @@
 }
 
 .techoHacha{
-    opacity: 0;
+    display: none;
 }
 
 .techoB{
-    opacity: 0;
+    display: none;
 }
 .escudo{
     grid-area: escudo;
@@ -271,13 +271,13 @@ footer{
     
     .techoHacha{
         grid-area: techoHacha;
-        opacity: 1;
+        display: unset;
         padding: 5px;
     }
     
     .techoB{
         grid-area: techoB;
-        opacity: 1;
+        display: unset;
     }
     .escudo{
         grid-area: escudo;
