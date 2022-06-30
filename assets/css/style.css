@@ -224,7 +224,9 @@ footer h5{
 .unetenos img{
     width: 100%;
 }
+
 /* Pagina Ubicación*/
+
 .contenedorUbicacion{
     display: flex;
     flex-direction: column;
@@ -249,6 +251,25 @@ footer h5{
     width:100%;
     position:absolute;
 }
+.parrafoPie{
+    width: 100%;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* pagina Tienda*/
+
+.tituloTienda h3{
+    text-align: center;
+    color: green;
+    font-family: "Tiro Devabagari Sanskrit";
+    font-size: 30px;
+    -webkit-text-stroke: 2px black;
+}
+
 /* display medianos*/
 
 @media(min-width:800px){
