@@ -13,16 +13,13 @@
 </head>
 <body>
     <header>
-        <div class="techo">
-            <img data-aos="fade-right" class="techoHacha" src="./assets/img/A.png" alt="imagenHacha">
-            <img data-aos="zoom-in" class="escudo" src="./assets/img/Escudo1.png" alt="escudo">
-            <div class="techoTitulos"> 
-                <h1>BARBARIANS</h1>
-                <h2> FOOTBALL AMERICANO-URUGUAY</h2>   
+            <div class="base d-flex flex-row flex-wrap align-items-center justify-content-around">
+                <img data-aos="zoom-in" class="m-5 col-4 col-sm-3 col-md-2 col-lg-1 img-fluid" src="./assets/img/Escudo1.png" alt="escudo">
+                <div class="m-3 col-12 text-center col-sm-6 text-sm-start">
+                    <h1 class="techoTitulos">BARBARIANS</h1>
+                    <h2 class="techoTitulos2"> FOOTBALL AMERICANO-URUGUAY</h2>  
+                </div> 
             </div>
-            <img data-aos="fade-left" class="techoB" src="./assets/img/B.png" alt="techoB">
-        </div>
-
     </header>
     <main class="base">
         <nav class="navbar navbar-expand-lg navbar-dark">
@@ -35,6 +32,9 @@
                     <ul class="navbar-nav">
                         <li class="nav-item">
                             <a class="nav-link active" aria-current="page" href="#">Inicio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./pages/nosotros.html">Nosotros</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="./pages/tienda.html">Tienda</a>
@@ -52,21 +52,23 @@
                 </div>
             </div>
         </nav>
-        <img class="cuadro" src="./assets/img/pf1.png" alt="cuadro">
-        <div class="parrafoPie">
-            <a class="parrafoPie__lufa" href="https://www.lufa.com.uy/" target="_blank"> <img class="redes" src="./assets/img/LUFA.png" alt="webLufa" ></a>
-            <p>Barbarians equipo perteneciente a la LUFA (Liga Uruguaya de Football Americano) es el primer campeón nacional en la modalidad tackle football con equipamiento. Primer equipo con personería jurídica reconocida por el MEC res. Nº 334/11, inscrito en el Ministerio de Deportes con el Nº 1365.</p>
-            <div class="pieRedes">
-                <h4>CONOCENOS</h4>
-                <div class="pieRedesIconos">
-                    <a data-aos="fade-up-right" class="pieRedes__face" href="https://www.facebook.com/BarbariansFootballAmericanoUruguay" target="_blank"> <img class="redes" src="./assets/img/redes/face.png" alt="webFace" ></a>
-                    <a data-aos="fade-up" class="pieRedes__inst"  href="https://www.instagram.com/barbarians_uy/" target="_blank"> <img class="redes" src="./assets/img/redes/inst.png" alt="webInst" ></a>
-                    <a data-aos="fade-up-left" class="pieRedes__what"  href="https://wa.me/59891085527" target="_blank"><img class="redes" src="./assets/img/redes/what.png" alt="webWhat" ></a>
+        <img class="img-fluid col-12" src="./assets/img/pf1.png" alt="cuadro">
+        <div class="row mb-5 align-items-center justify-content-around">
+            <a class="m-4 col-4 col-lg-2" href="https://www.lufa.com.uy/" target="_blank"> <img class="img-fluid" src="./assets/img/LUFA.png" alt="webLufa" ></a>
+            <p class="text-center col-8 col-lg-4 text-lg-start ">Barbarians equipo perteneciente a la LUFA (Liga Uruguaya de Football Americano) es el primer campeón nacional en la modalidad tackle football con equipamiento. Primer equipo con personería jurídica reconocida por el MEC res. Nº 334/11, inscrito en el Ministerio de Deportes con el Nº 1365.</p>
+            <div class="col-12 col-lg-4">
+                <div class="tituloTienda col-12 text-center">
+                    <h3 class="m-4">CONOCENOS</h3>
+                </div>
+                <div class="row">
+                    <a data-aos="fade-up-right" class="col-4 " href="https://www.facebook.com/BarbariansFootballAmericanoUruguay" target="_blank"> <img class="pieRedes__face img-fluid" src="./assets/img/redes/face.png" alt="webFace" ></a>
+                    <a data-aos="fade-up" class="col-4"  href="https://www.instagram.com/barbarians_uy/" target="_blank"> <img class="pieRedes__inst img-fluid" src="./assets/img/redes/inst.png" alt="webInst" ></a>
+                    <a data-aos="fade-up-left" class="col-4"  href="https://wa.me/59891085527" target="_blank"><img class="pieRedes__what img-fluid" src="./assets/img/redes/what.png" alt="webWhat" ></a>
                 </div>  
             </div>
         </div>
     </main>
-        <footer>
+    <footer>
         <h5>© FERBI 2022, Todos los derechos reservados.</h5>
     </footer>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>

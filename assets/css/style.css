@@ -7,18 +7,7 @@
     box-sizing: border-box;
     font-family: Arial, Helvetica, sans-serif;
 }
-
-.techo{
-    display: grid;
-    grid-template-columns: repeat(4,1fr);
-    grid-template-rows: auto auto 0px;
-    grid-template-areas: "escudo escudo escudo escudo"
-                        "techoTitulos techoTitulos techoTitulos techoTitulos";
-    background-image: url(../img/hachas\ \(5\).jpg);
-    background-attachment:fixed;
-    justify-items: center;
-}
-
+/*
 .techoHacha{
     display: none;
 }
@@ -26,21 +15,24 @@
 .techoB{
     display: none;
 }
+*/
 .escudo{
-    grid-area: escudo;
     padding: 5px;
 }
-.techoTitulos{
-    grid-area: techoTitulos;
-    text-align: center;
-}
+
 .techo img{
     height: 170px;
 }
 
-.techo h1{
+.techoTitulos{
     font-family: "Tiro Devabagari Sanskrit";
     font-size: 50px;
+    color: green;
+    -webkit-text-stroke: 2px black;
+}
+.techoTitulos2{
+    font-family: "Tiro Devabagari Sanskrit";
+    font-size: 20px;
     color: green;
     -webkit-text-stroke: 2px black;
 }
@@ -52,41 +44,6 @@
     background-attachment:fixed;
 }
 
-.cuadro{
-    width: 100%;
-    margin-top: 10px;
-}
-
-.parrafoPie{
-    width: 100%;
-    margin-bottom: 20px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
-}
-
-.parrafoPie__lufa{
-    width: 30%;
-    margin-left: 30px;
-    
-}
-
-.parrafoPie p{
-    margin: 20px;
-    font-size: 100%;
-    text-align: center;
-}
-.pieRedes{
-
-    margin: 10px;
-    
-}
-.pieRedesIconos{
-    display: flex;
-    
-}
-
 .pieRedes h4{
     text-align: center;
     color: green;
@@ -96,23 +53,17 @@
 }
 
 .pieRedes__face{
-    margin: 10px;
     box-shadow: -10px 10px 10px rgb(0, 0, 0);
 }
 
 .pieRedes__inst{
-    margin: 10px;
     box-shadow: 0px 10px 10px rgb(0, 0, 0);
 }
 
 .pieRedes__what{
-    margin: 10px;
     box-shadow: 10px 10px 10px rgb(0, 0, 0);
 }
 
-.redes{
-    width: 100%;
-}
 
 footer{
     position: fixed;
@@ -127,34 +78,7 @@ footer h5{
 }
 /*Pagina Partidos*/
 
-.partidos{
-    margin: 10px;
-    display: grid;
-    grid-template-columns: repeat(4,1fr) ; 
-    grid-template-rows: auto auto auto;
-    grid-template-areas:"tituloPartido tituloPartido tituloPartido tituloPartido"
-                        "videos        videos        videos        videos"
-                        "lufayoutube   lufayoutube   lufayoutube   lufayoutube";
-}
-.tituloPartido{
-    grid-area: tituloPartido;
-    font-size: 20px;
-    text-align: center;
-}
-.videos{
-    grid-area: videos;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-}
-.videos div{
-    padding: 10px;
-}
-.videos div h3{
-    font-size: 20px;
-}
+
 .lufayoutube{
     grid-area: lufayoutube;
     margin: 20px;
@@ -165,36 +89,16 @@ footer h5{
     align-items: center;
     justify-content: center;
 }
-.lufayoutube h2{
-    margin: 10px;
-    font-size: 20px;
-}
-.unetenos{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-.unetenos img{
-    width: 100px;
-}
 
 /*pagina Contacto*/
 
-.contactos{
-    display: grid;
-    grid-template-columns: repeat(4,1fr);
-    grid-template-rows: auto auto auto;
-    grid-template-areas:"tituloFormulario tituloFormulario tituloFormulario tituloFormulario"
-                        "cajaFormulario   cajaFormulario   cajaFormulario   cajaFormulario"
-                        "unetenos         unetenos         unetenos         unetenos";
-}
 .tituloFormulario{
-    grid-area: tituloFormulario;
+
     margin: 10px;
     text-align: center;
 }
 .cajaFormulario{
-    grid-area: cajaFormulario;
+
     display: flex;
     flex-direction: column;
     margin: 0px 50px 50px 50px;
@@ -214,16 +118,8 @@ footer h5{
     border: 2px solid green;
     border-radius: 5px;
 }
-.unetenos{
-    grid-area: unetenos;
-    display: flex;
-    flex-direction: column;
-    margin: 20px;
-    align-items: center;
-}
-.unetenos img{
-    width: 100%;
-}
+
+
 
 /* Pagina Ubicación*/
 
@@ -251,14 +147,7 @@ footer h5{
     width:100%;
     position:absolute;
 }
-.parrafoPie{
-    width: 100%;
-    margin-bottom: 20px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
-}
+
 
 /* pagina Tienda*/
 
@@ -273,47 +162,15 @@ footer h5{
 /* display medianos*/
 
 @media(min-width:800px){
-    .parrafoPie{
-        flex-direction: row;
-        align-items: center;
-        justify-content: space-between;
-    }
-    .tituloPartido{
-        font-size: 30px;
-    }
-    .parrafoPie__lufa{
-        width: 30%;
-        margin-left: 30px;
-        
-        
-    }
-    .pieRedes h4{
-        text-align:left;
-    }
+
     footer h5{
         font-size: 15px;
     }
 
     /* pagina partidos*/
 
-    .videos{
-        flex-direction: row;
-        flex-wrap: wrap;
-    }
-    .videos div h3{
-        font-size: 30px;
-    }
-    .unetenos{
-        flex-direction: row;
-        justify-content: space-around;
-
-    }
-
     /*pagina Contactos*/
 
-    .unetenos{
-        flex-direction: row;
-    }
 
     /* pagina Ubicación*/
 
@@ -326,72 +183,18 @@ footer h5{
 /* display grandes*/
 
 @media(min-width:1200px){
-    .techo{
-        grid-template-rows: 170px 0px 0px;
-        grid-template-areas:"techoHacha escudo techoTitulos techoB";
-    }
-    
-    .techoHacha{
-        grid-area: techoHacha;
-        display: unset;
-        padding: 5px;
-    }
-    
-    .techoB{
-        grid-area: techoB;
-        display: unset;
-    }
-    .escudo{
-        grid-area: escudo;
-        padding: 5px;
-    }
-    .techoTitulos{
-        grid-area: techoTitulos;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        text-align: center;
-    }
-    .techo h1{
-        font-size: 70px;
-    }
-    .techo h2{
-        font-size: 25px;
-    }
-    
-    .parrafoPie__lufa{
-        width: 15%;        
-    }
-
 
     /* pagina Partidos*/
 
-    .partidos{
-        grid-template-areas:"tituloPartido tituloPartido tituloPartido lufayoutube"
-                            "videos        videos        videos        lufayoutube"
-                            "videos        videos        videos        lufayoutube";
-    }
 
-    .unetenos{
-        flex-direction: column;
-    }
 
     /*pagina Contactos*/
 
-    .unetenos{
-        margin: 20px;
-    }
-    .contactos{
-        grid-template-areas:"tituloFormulario tituloFormulario tituloFormulario unetenos"
-                            "cajaFormulario   cajaFormulario   cajaFormulario   unetenos"
-                            "cajaFormulario   cajaFormulario   cajaFormulario   unetenos";
-    }
         /* pagina Ubicación*/
     
-        .tituloUbicacion h3{
-            font-size: 25px;
-        }
+    .tituloUbicacion h3{
+        font-size: 25px;
+    }
 }
 
 
