@@ -158,12 +158,12 @@ footer h5{
     font-size: 30px;
     -webkit-text-stroke: 2px black;
 }
+
 /*pagina nosotros*/
 
 .colorLetra{
     color: green;
 }
-
 /* display medianos*/
 
 @media(min-width:800px){
