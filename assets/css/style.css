@@ -77,12 +77,8 @@
 }
 
 footer{
-    position: fixed;
-    bottom: 0;
-    width: 100%;
     background-color: green;
     color: white;
-    padding: 5px;
 }
 footer h5{
     font-size: 10px;
