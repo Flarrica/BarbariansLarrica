@@ -104,12 +104,10 @@ footer h5{
 /*pagina Contacto*/
 
 .tituloFormulario{
-
     margin: 10px;
     text-align: center;
 }
 .cajaFormulario{
-
     display: flex;
     flex-direction: column;
     margin: 0px 50px 50px 50px;
@@ -201,23 +199,15 @@ footer h5{
 
 @media(min-width:1000px){
 
-    .techo{
-        grid-template-rows: 170px 0px 0px;
-        grid-template-areas:"techoHacha escudo techoTitulos techoB";
-    }
-    
     .techoHacha{
-        grid-area: techoHacha;
         display: unset;
         padding: 5px;
     }
     
     .techoB{
-        grid-area: techoB;
         display: unset;
     }
     .escudo{
-        grid-area: escudo;
         padding: 5px;
     }
 
@@ -227,11 +217,12 @@ footer h5{
 
     /*pagina Contactos*/
 
-        /* pagina Ubicación*/
+    /* pagina Ubicación*/
     
     .tituloUbicacion h3{
         font-size: 25px;
     }
+
 }
 
 
