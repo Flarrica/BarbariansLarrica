@@ -7,17 +7,13 @@
     box-sizing: border-box;
     font-family: Arial, Helvetica, sans-serif;
 }
-/*
+
 .techoHacha{
     display: none;
 }
 
 .techoB{
     display: none;
-}
-*/
-.escudo{
-    padding: 5px;
 }
 
 .techo img{
@@ -203,7 +199,27 @@ footer h5{
 
 /* display grandes*/
 
-@media(min-width:1200px){
+@media(min-width:1000px){
+
+    .techo{
+        grid-template-rows: 170px 0px 0px;
+        grid-template-areas:"techoHacha escudo techoTitulos techoB";
+    }
+    
+    .techoHacha{
+        grid-area: techoHacha;
+        display: unset;
+        padding: 5px;
+    }
+    
+    .techoB{
+        grid-area: techoB;
+        display: unset;
+    }
+    .escudo{
+        grid-area: escudo;
+        padding: 5px;
+    }
 
     /* pagina Partidos*/
 
