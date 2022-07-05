@@ -1,219 +1,187 @@
-
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;300&family=Joan&family=Roboto+Slab:wght@600&family=Tiro+Devanagari+Sanskrit&display=swap');
-
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: Arial, Helvetica, sans-serif;
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;300&family=Joan&family=Roboto+Slab:wght@600&family=Tiro+Devanagari+Sanskrit&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
-.techoHacha{
-    display: none;
+.redes a:nth-child(1) {
+  box-shadow: -10px 10px 10px rgb(0, 0, 0);
+}
+.redes a:nth-child(1):hover {
+  box-shadow: -5px 5px 5px rgb(0, 0, 0);
+}
+.redes a:nth-child(1):active {
+  box-shadow: -1px 1px 1px rgb(0, 0, 0);
+}
+.redes a:nth-child(2) {
+  box-shadow: 0px 10px 10px rgb(0, 0, 0);
+}
+.redes a:nth-child(2):hover {
+  box-shadow: 0px 5px 5px rgb(0, 0, 0);
+}
+.redes a:nth-child(2):active {
+  box-shadow: 0px 1px 1px rgb(0, 0, 0);
+}
+.redes a:nth-child(3) {
+  box-shadow: 10px 10px 10px rgb(0, 0, 0);
+}
+.redes a:nth-child(3):hover {
+  box-shadow: 5px 5px 5px rgb(0, 0, 0);
+}
+.redes a:nth-child(3):active {
+  box-shadow: 1px 1px 1px rgb(0, 0, 0);
 }
 
-.techoB{
-    display: none;
+footer {
+  background-color: green;
+  color: white;
+}
+footer h5 {
+  font-size: 10px;
 }
 
-.techo img{
-    height: 170px;
+@media (min-width: 800px) {
+  footer h5 {
+    font-size: 15px;
+  }
+}
+.techoHacha {
+  display: none;
 }
 
-.techoTitulos{
-    font-family: "Tiro Devabagari Sanskrit";
-    font-size: 50px;
-    color: green;
-    -webkit-text-stroke: 2px black;
-}
-.techoTitulos2{
-    font-family: "Tiro Devabagari Sanskrit";
-    font-size: 20px;
-    color: green;
-    -webkit-text-stroke: 2px black;
-}
-.navbar{
-    background-color: green;
-}
-.base{
-    background-image: url(../img/hachas\ \(5\).jpg);
-    background-attachment:fixed;
+.techoB {
+  display: none;
 }
 
-.pieRedes h4{
-    text-align: center;
-    color: green;
-    font-family: "Tiro Devabagari Sanskrit";
-    font-size: 40px;
-    -webkit-text-stroke: 2px black;
+.techoTitulos {
+  font-family: "Tiro Devabagari Sanskrit";
+  font-size: 50px;
+  color: green;
+  -webkit-text-stroke: 2px black;
 }
 
-.pieRedes__face{
-    box-shadow: -10px 10px 10px rgb(0, 0, 0);
-}
-.pieRedes__face:hover{
-    box-shadow: -5px 5px 5px rgb(0, 0, 0);
-}
-.pieRedes__face:active{
-    box-shadow: -1px 1px 1px rgb(0, 0, 0);
-}
-.pieRedes__inst{
-    box-shadow: 0px 10px 10px rgb(0, 0, 0);
-}
-.pieRedes__inst:hover{
-    box-shadow: 0px 5px 5px rgb(0, 0, 0);
-}
-.pieRedes__inst:active{
-    box-shadow: 0px 1px 1px rgb(0, 0, 0);
-}
-.pieRedes__what{
-    box-shadow: 10px 10px 10px rgb(0, 0, 0);
-}
-.pieRedes__what:hover{
-    box-shadow: 5px 5px 5px rgb(0, 0, 0);
-}
-.pieRedes__what:active{
-    box-shadow: 1px 1px 1px rgb(0, 0, 0);
+.techoTitulos2 {
+  font-family: "Tiro Devabagari Sanskrit";
+  font-size: 20px;
+  color: green;
+  -webkit-text-stroke: 2px black;
 }
 
-footer{
-    background-color: green;
-    color: white;
+.navbar {
+  background-color: green;
 }
-footer h5{
-    font-size: 10px;
+
+.base {
+  background-image: url(../img/hachas\ \(5\).jpg);
+  background-attachment: fixed;
 }
+
+.btnForm {
+  margin: 10px;
+  padding: 5px;
+  border: 2px solid green;
+  border-radius: 5px;
+}
+
 /*Pagina Partidos*/
-
-
-.lufayoutube{
-    grid-area: lufayoutube;
-    display: flex;
-    flex-direction: column;
-    background-color: black;
-    color: white;
-    align-items: center;
-    justify-content: center;
+.lufayoutube {
+  grid-area: lufayoutube;
+  display: flex;
+  flex-direction: column;
+  background-color: black;
+  color: white;
+  align-items: center;
+  justify-content: center;
 }
 
 /*pagina Contacto*/
-
-
-.cajaFormulario{
-    display: flex;
-    flex-direction: column;
-    border: 5px solid green;
-    padding: 10px;
-    border-radius: 10px;
-}
-.botonesFormulario{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-}
-.btnForm{
-    margin: 10px;
-    padding: 5px;
-    border: 2px solid green;
-    border-radius: 5px;
+.cajaFormulario {
+  display: flex;
+  flex-direction: column;
+  border: 5px solid green;
+  padding: 10px;
+  border-radius: 10px;
 }
 
-
+.botonesFormulario {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
 /* Pagina Ubicación*/
-
-.contenedorUbicacion{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-.tituloUbicacion h3{
-    font-size: 15px;
-    margin: 10px;
+.contenedorUbicacion {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-.map-container{
-    margin: 0px 20px 50px 20px;
-    overflow:hidden;
-    padding-bottom:56.25%;
-    position:relative;
-    height:0;
-}
-.map-container iframe{
-    left:0;
-    top:0;
-    height:100%;
-    width:100%;
-    position:absolute;
+.tituloUbicacion h3 {
+  font-size: 15px;
+  margin: 10px;
 }
 
+.map-container {
+  margin: 0px 20px 50px 20px;
+  overflow: hidden;
+  padding-bottom: 56.25%;
+  position: relative;
+  height: 0;
+}
+
+.map-container iframe {
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+}
 
 /* pagina Tienda*/
-
-.tituloTienda h3{
-    text-align: center;
-    color: green;
-    font-family: "Tiro Devabagari Sanskrit";
-    font-size: 30px;
-    -webkit-text-stroke: 2px black;
+.tituloTienda h3 {
+  text-align: center;
+  color: green;
+  font-family: "Tiro Devabagari Sanskrit";
+  font-size: 30px;
+  -webkit-text-stroke: 2px black;
 }
 
 /*pagina nosotros*/
-
-.colorLetra{
-    color: green;
+.colorLetra {
+  color: green;
 }
 
 /* display medianos*/
-
-@media(min-width:800px){
-
-    footer h5{
-        font-size: 15px;
-    }
-
-    /* pagina partidos*/
-
-    /*pagina Contactos*/
-
-
-    /* pagina Ubicación*/
-
-    .tituloUbicacion h3{
-        font-size: 20px;
-    }
-
+@media (min-width: 800px) {
+  /* pagina partidos*/
+  /*pagina Contactos*/
+  /* pagina Ubicación*/
+  .tituloUbicacion h3 {
+    font-size: 20px;
+  }
 }
-
 /* display grandes*/
+@media (min-width: 1000px) {
+  .techoHacha {
+    display: unset;
+    padding: 5px;
+  }
 
-@media(min-width:1000px){
+  .techoB {
+    display: unset;
+  }
 
-    .techoHacha{
-        display: unset;
-        padding: 5px;
-    }
-    
-    .techoB{
-        display: unset;
-    }
-    .escudo{
-        padding: 5px;
-    }
+  .escudo {
+    padding: 5px;
+  }
 
-    /* pagina Partidos*/
-
-
-
-    /*pagina Contactos*/
-
-    /* pagina Ubicación*/
-    
-    .tituloUbicacion h3{
-        font-size: 25px;
-    }
-
-}
-
-
+  /* pagina Partidos*/
+  /*pagina Contactos*/
+  /* pagina Ubicación*/
+  .tituloUbicacion h3 {
+    font-size: 25px;
+  }
+}/*# sourceMappingURL=style.css.map */

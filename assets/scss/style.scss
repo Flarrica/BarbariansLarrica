@@ -1,0 +1,167 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;300&family=Joan&family=Roboto+Slab:wght@600&family=Tiro+Devanagari+Sanskrit&display=swap');
+
+
+@import "reset";
+@import "redes";
+
+@import "footer";
+
+.techoHacha{
+    display: none;
+}
+
+.techoB{
+    display: none;
+}
+
+.techoTitulos{
+    font-family: "Tiro Devabagari Sanskrit";
+    font-size: 50px;
+    color: green;
+    -webkit-text-stroke: 2px black;
+}
+.techoTitulos2{
+    font-family: "Tiro Devabagari Sanskrit";
+    font-size: 20px;
+    color: green;
+    -webkit-text-stroke: 2px black;
+}
+.navbar{
+    background-color: green;
+}
+.base{
+    background-image: url(../img/hachas\ \(5\).jpg);
+    background-attachment:fixed;
+}
+
+.btnForm{
+    margin: 10px;
+    padding: 5px;
+    border: 2px solid green;
+    border-radius: 5px;
+}
+/*Pagina Partidos*/
+
+
+.lufayoutube{
+    grid-area: lufayoutube;
+    display: flex;
+    flex-direction: column;
+    background-color: black;
+    color: white;
+    align-items: center;
+    justify-content: center;
+}
+
+/*pagina Contacto*/
+
+
+.cajaFormulario{
+    display: flex;
+    flex-direction: column;
+    border: 5px solid green;
+    padding: 10px;
+    border-radius: 10px;
+}
+.botonesFormulario{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+
+
+
+/* Pagina Ubicación*/
+
+.contenedorUbicacion{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.tituloUbicacion h3{
+    font-size: 15px;
+    margin: 10px;
+}
+
+.map-container{
+    margin: 0px 20px 50px 20px;
+    overflow:hidden;
+    padding-bottom:56.25%;
+    position:relative;
+    height:0;
+}
+.map-container iframe{
+    left:0;
+    top:0;
+    height:100%;
+    width:100%;
+    position:absolute;
+}
+
+
+/* pagina Tienda*/
+
+.tituloTienda h3{
+    text-align: center;
+    color: green;
+    font-family: "Tiro Devabagari Sanskrit";
+    font-size: 30px;
+    -webkit-text-stroke: 2px black;
+}
+
+/*pagina nosotros*/
+
+.colorLetra{
+    color: green;
+}
+
+/* display medianos*/
+
+@media(min-width:800px){
+
+    /* pagina partidos*/
+
+    /*pagina Contactos*/
+
+
+    /* pagina Ubicación*/
+
+    .tituloUbicacion h3{
+        font-size: 20px;
+    }
+
+}
+
+/* display grandes*/
+
+@media(min-width:1000px){
+
+    .techoHacha{
+        display: unset;
+        padding: 5px;
+    }
+    
+    .techoB{
+        display: unset;
+    }
+    .escudo{
+        padding: 5px;
+    }
+
+    /* pagina Partidos*/
+
+
+
+    /*pagina Contactos*/
+
+    /* pagina Ubicación*/
+    
+    .tituloUbicacion h3{
+        font-size: 25px;
+    }
+
+}
+
+
