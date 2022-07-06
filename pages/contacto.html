@@ -53,66 +53,69 @@
                 </div>
             </div>
         </nav>
-        <div class="contactos m-2 row justify-content-center">
-            <div class="m-3 col-12 col-lg-7">
-                <div class="tituloTienda">
-                    <h3 class="m-4">COMPLETA EL FORMULARIO QUE TE CONTACTAMOS</h3>
+        <div class="row container-fluid align-items-start justify-content-center m-0">
+            <div class="row m-3 align-items-center justify-content-around col-lg-7">
+                <div class="tituloTienda row pb-4">
+                    <h3>COMPLETA EL FORMULARIO QUE TE CONTACTAMOS</h3>
                 </div>
-                <div class="cajaFormulario">
-                    <form action="" method="get"></form>
-                    <label for="nombre">NOMBRE</label>
-                    <input type="text" name="NOMBRE" id="nombre" placeholder="ingrese su nombre" required>
-                    <br>
-                    <label for="apellido">APELLIDO</label>
-                    <input type="text" name="apellido" id="apellido" placeholder="ingrese su apellido">
-                    <br>
-                    <label for="telefono">TELEFONO - CELULAR</label>
-                    <input type="number" name="telefono" id="telefono" placeholder="fijo o celular" required>
-                    <br>
-                    <label for="documento">TIPO DE DOCUMENTO</label>
-                    <select name="documento">
-                        <option value="cedula">nro. de cédula</option>
-                        <option value="dni">DNI</option>
-                        <option value="pasaporte">pasaporte</option>
-                        <option value="otro">otro</option>
-                    </select>
-                    <input type="number" name="documento" id="documento" placeholder="ingrese su nro. de documento" required>
-                    <br>
-                    <label for="email">CORREO ELECTRONICO:</label>
-                    <input type="email" name="mail" id="mail" placeholder="ingrese su correo electronico" required>
-                    <br>
-                    <fieldset>
-                        <legend>GÉNERO</legend>
-                        <div>
-                            <label for="genero">Hombre</label>
-                            <input type="radio" name="sexo" value="hombre">
-                            <label for="genero">Mujer</label>
-                            <input type="radio" name="sexo" value="mujer" >
-                            <label for="genero">No binario</label>
-                            <input type="radio" name="sexo" value="no binario">
-                        </div>
-                    </fieldset>
-                    <br>
-                    <div>
-                        <label for="Seleccion">Selecciona el equipo al que quieres unirte</label>
-                        <select name="Seleccion">
-                            <option value="Barbarians">Barbarians</option>
-                            <option value="Valkirias">Valkirias</option>
+                <div class="cajaFormulario row p-3 align-items-center justify-content-center">
+                    <form action="" method="get" class="row col-12 p-1 align-items-center justify-content-center">
+                        <label for="nombre">NOMBRE</label>
+                        <input type="text" name="NOMBRE" id="nombre" placeholder="ingrese su nombre" required>
+                        
+                        <label for="apellido">APELLIDO</label>
+                        <input type="text" name="apellido" id="apellido" placeholder="ingrese su apellido">
+                        
+                        <label for="telefono">TELEFONO - CELULAR</label>
+                        <input type="number" name="telefono" id="telefono" placeholder="fijo o celular" required>
+                        
+                        <label for="documento">TIPO DE DOCUMENTO</label>
+                        <select name="documento">
+                            <option value="cedula">nro. de cédula</option>
+                            <option value="dni">DNI</option>
+                            <option value="pasaporte">pasaporte</option>
+                            <option value="otro">otro</option>
                         </select>
-                    </div>
-                    <br>
-                    <textarea name="comentarios" id="" cols="30" rows="10" placeholder="contanos que querés saber, en que te podemos ayudar" ></textarea>
-                    <br>
-                    <label for="acepta terminos y condiciones"> Acepta terminos y condiciones </label>
-                    <input type="checkbox" name="acepto" value="si" required>
-                    <br>
-                    <div class="botonesFormulario">
-                        <input class="btnForm" type="submit" value="Enviar">
-                        <input class="btnForm" type="reset" value="Reiniciar">
-                    </div>
+                        <input type="number" name="documento" id="documento" placeholder="ingrese su nro. de documento" required>
+                        
+                        <label for="email">CORREO ELECTRONICO:</label>
+                        <input type="email" name="mail" id="mail" placeholder="ingrese su correo electronico" required>
+                        
+                        <fieldset>
+                            <label for="genero">GENERO</label>
+                            <div>
+                                <label for="genero">Hombre</label>
+                                <input type="radio" name="sexo" value="hombre">
+                                <label for="genero">Mujer</label>
+                                <input type="radio" name="sexo" value="mujer" >
+                                <label for="genero">No binario</label>
+                                <input type="radio" name="sexo" value="no binario">
+                            </div>
+                        </fieldset>
+                        
+                        <div>
+                            <label for="Seleccion">Selecciona el equipo al que quieres unirte</label>
+                            <select name="Seleccion">
+                                <option value="Barbarians">Barbarians</option>
+                                <option value="Valkirias">Valkirias</option>
+                            </select>
+                        </div>
+                        
+                        <textarea name="comentarios" id="" cols="30" rows="10" placeholder="contanos que querés saber, en que te podemos ayudar" ></textarea>
+                        
+                        <div>
+                            <label for="acepta terminos y condiciones"> Acepta terminos y condiciones </label>
+                            <input type="checkbox" name="acepto" value="si" required>
+                        </div>
+                        
+                        <div class="row align-items-center justify-content-center">
+                            <input class="btnForm col-4 col-sm-2" type="submit" value="Enviar">
+                            <input class="btnForm col-4 col-sm-2" type="reset" value="Reiniciar">
+                        </div>
+                    </form>
                 </div>
             </div>
-            <div class="row flex-wrap align-items-center justify-content-center col-12 col-lg-4">
+            <div class="row flex-wrap py-3 col-12 col-lg-4">
                     <img class="img-fluid" src="../assets/img/sumate.jpg" alt="sumateUno">
                     <img class="img-fluid" src="../assets/img/sumate2.jpg" alt="sumateDos">
             </div>

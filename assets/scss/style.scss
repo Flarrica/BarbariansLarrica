@@ -2,15 +2,12 @@
 
 
 @import "reset";
-@import "nav";
+@import "techo";
+@import "base";
 @import "redes";
 
 @import "footer";
 
-.base{
-    background-image: url(../img/hachas\ \(5\).jpg);
-    background-attachment:fixed;
-}
 
 .btnForm{
     margin: 10px;
@@ -35,33 +32,12 @@
 
 
 .cajaFormulario{
-    display: flex;
-    flex-direction: column;
     border: 5px solid green;
-    padding: 10px;
     border-radius: 10px;
 }
-.botonesFormulario{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-}
-
-
 
 
 /* Pagina Ubicación*/
-
-.contenedorUbicacion{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-.tituloUbicacion h3{
-    font-size: 15px;
-    margin: 10px;
-}
 
 .map-container{
     margin: 0px 20px 50px 20px;
@@ -69,15 +45,14 @@
     padding-bottom:56.25%;
     position:relative;
     height:0;
+    iframe{
+        left:0;
+        top:0;
+        height:100%;
+        width:100%;
+        position:absolute;
+    }
 }
-.map-container iframe{
-    left:0;
-    top:0;
-    height:100%;
-    width:100%;
-    position:absolute;
-}
-
 
 /* pagina Tienda*/
 
@@ -116,21 +91,7 @@
 
 @media(min-width:1000px){
 
-    .techoHacha{
-        display: unset;
-        padding: 5px;
-    }
-    
-    .techoB{
-        display: unset;
-    }
-    .escudo{
-        padding: 5px;
-    }
-
     /* pagina Partidos*/
-
-
 
     /*pagina Contactos*/
 
