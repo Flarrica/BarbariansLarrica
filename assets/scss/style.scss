@@ -2,10 +2,10 @@
 
 
 @import "reset";
+@import "variables";
 @import "techo";
 @import "base";
 @import "redes";
-
 @import "footer";
 
 
@@ -19,13 +19,8 @@
 
 
 .lufayoutube{
-    grid-area: lufayoutube;
-    display: flex;
-    flex-direction: column;
     background-color: black;
     color: white;
-    align-items: center;
-    justify-content: center;
 }
 
 /*pagina Contacto*/
@@ -56,12 +51,14 @@
 
 /* pagina Tienda*/
 
-.tituloTienda h3{
+.tituloTienda { 
+    h3{
     text-align: center;
     color: green;
     font-family: "Tiro Devabagari Sanskrit";
     font-size: 30px;
     -webkit-text-stroke: 2px black;
+    }
 }
 
 /*pagina nosotros*/
@@ -81,10 +78,11 @@
 
     /* pagina Ubicación*/
 
-    .tituloUbicacion h3{
+    .tituloUbicacion {
+    h3{
         font-size: 20px;
     }
-
+    }
 }
 
 /* display grandes*/
@@ -97,10 +95,10 @@
 
     /* pagina Ubicación*/
     
-    .tituloUbicacion h3{
+    .tituloUbicacion {
+    h3{
         font-size: 25px;
     }
-
+    }
 }
-
 
