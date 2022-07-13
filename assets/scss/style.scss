@@ -3,6 +3,7 @@
 
 @import "reset";
 @import "variables";
+@import "btn";
 @import "techo";
 @import "base";
 @import "redes";
@@ -10,11 +11,12 @@
 
 
 .btnForm{
-    margin: 10px;
-    padding: 5px;
-    border: 2px solid $colorPrimario;
-    border-radius: 5px;
+    margin: map-get($btn , margin );
+    padding: map-get($btn , padding );
+    border: map-get($btn , border );
+    border-radius: map-get($btn , border-radius );
 }
+
 /*Pagina Partidos*/
 
 
