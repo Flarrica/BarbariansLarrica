@@ -1,6 +1,24 @@
 $btn:(
     margin: 10px,
-    padding: 5px,
     border: 2px solid $colorPrimario,
     border-radius: 5px
 );
+
+$coloresBoton:(
+    Primario:green,
+    Secundario:white,
+);
+
+@mixin propiedades($color, $padding) {
+    color:$color;
+    padding: $padding;
+}
+
+@each $key, $var in $coloresBoton{
+
+    .btn#{$key}{
+        @extend .btnForm;
+        background-color: $var;
+        @include propiedades(blue,5px)
+    }    
+}
