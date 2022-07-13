@@ -12,7 +12,7 @@
 .btnForm{
     margin: 10px;
     padding: 5px;
-    border: 2px solid green;
+    border: 2px solid $colorPrimario;
     border-radius: 5px;
 }
 /*Pagina Partidos*/
@@ -20,14 +20,14 @@
 
 .lufayoutube{
     background-color: black;
-    color: white;
+    color: $colorSecundario;
 }
 
 /*pagina Contacto*/
 
 
 .cajaFormulario{
-    border: 5px solid green;
+    border: 5px solid $colorPrimario;
     border-radius: 10px;
 }
 
@@ -54,7 +54,7 @@
 .tituloTienda { 
     h3{
     text-align: center;
-    color: green;
+    color: $colorPrimario;
     font-family: "Tiro Devabagari Sanskrit";
     font-size: 30px;
     -webkit-text-stroke: 2px black;
@@ -64,7 +64,7 @@
 /*pagina nosotros*/
 
 .colorLetra{
-    color: green;
+    color: $colorPrimario;
 }
 
 /* display medianos*/

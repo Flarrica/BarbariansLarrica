@@ -11,17 +11,17 @@
 .techoTitulos{
     font-family: "Tiro Devabagari Sanskrit";
     font-size: 50px;
-    color: green;
+    color: $colorPrimario;
     -webkit-text-stroke: 2px black;
 }
 .techoTitulos2{
     font-family: "Tiro Devabagari Sanskrit";
     font-size: 20px;
-    color: green;
+    color: $colorPrimario;
     -webkit-text-stroke: 2px black;
 }
 .navbar{
-    background-color: green;
+    background-color: $colorPrimario;
 }
 
 
