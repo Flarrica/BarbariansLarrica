@@ -9,14 +9,24 @@
 
 .btnPrimario {
   background-color: green;
+  /* cambio el color del boton solo para la entrega en realidad las letras van a ser verdes y blancas*/
   color: blue;
   padding: 5px;
 }
 
 .btnSecundario {
   background-color: white;
+  /* cambio el color del boton solo para la entrega en realidad las letras van a ser verdes y blancas*/
   color: blue;
   padding: 5px;
+}
+
+.btnPrimario {
+  color: white;
+}
+
+.btnSecundario {
+  color: green;
 }
 
 .techoHacha {
