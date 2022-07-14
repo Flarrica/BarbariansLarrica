@@ -9,16 +9,10 @@
 
 .btnPrimario {
   background-color: green;
-  /* cambio el color del boton solo para la entrega en realidad las letras van a ser verdes y blancas*/
-  color: blue;
-  padding: 5px;
 }
 
 .btnSecundario {
   background-color: white;
-  /* cambio el color del boton solo para la entrega en realidad las letras van a ser verdes y blancas*/
-  color: blue;
-  padding: 5px;
 }
 
 .btnPrimario {
@@ -107,9 +101,15 @@ footer {
 footer h5 {
   font-size: 10px;
 }
+footer h4 {
+  font-size: 10px;
+}
 
 @media (min-width: 800px) {
   footer h5 {
+    font-size: 15px;
+  }
+  footer h4 {
     font-size: 15px;
   }
 }

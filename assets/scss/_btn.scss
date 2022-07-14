@@ -24,11 +24,9 @@ $textoBoton:(
     .btn#{$key}{
         @extend .btnForm;
         background-color: $var;
-        /* cambio el color del boton solo para la entrega en realidad las letras van a ser verdes y blancas*/
-        @include propiedades(blue,5px)
     }    
 }
-/*
+
 @each $key, $var in $textoBoton{
 
     .btn#{$key}{
@@ -36,4 +34,4 @@ $textoBoton:(
         color: $var;
     }    
 }
-*/
+
