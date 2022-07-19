@@ -62,28 +62,33 @@
                 </div>
                 <div class="cajaFormulario row p-3 align-items-center justify-content-center">
                     <form action="" method="get" class="row col-12 p-1 align-items-center justify-content-center">
-                        <label for="nombre">NOMBRE</label>
-                        <input type="text" name="NOMBRE" id="nombre" placeholder="ingrese su nombre" required>
-                        
-                        <label for="apellido">APELLIDO</label>
-                        <input type="text" name="apellido" id="apellido" placeholder="ingrese su apellido">
-                        
-                        <label for="telefono">TELEFONO - CELULAR</label>
-                        <input type="number" name="telefono" id="telefono" placeholder="fijo o celular" required>
-                        
-                        <label for="documento">TIPO DE DOCUMENTO</label>
-                        <select name="documento">
-                            <option value="cedula">nro. de cédula</option>
-                            <option value="dni">DNI</option>
-                            <option value="pasaporte">pasaporte</option>
-                            <option value="otro">otro</option>
-                        </select>
-                        <input type="number" name="documento" id="documento" placeholder="ingrese su nro. de documento" required>
-                        
-                        <label for="email">CORREO ELECTRONICO:</label>
-                        <input type="email" name="mail" id="mail" placeholder="ingrese su correo electronico" required>
-                        
-                        <fieldset>
+                        <div class="d-flex flex-column p-1">
+                            <label for="nombre">NOMBRE</label>
+                            <input type="text" name="NOMBRE" id="nombre" placeholder="ingrese su nombre" required>
+                        </div>
+                        <div class="d-flex flex-column p-1">
+                            <label for="apellido">APELLIDO</label>
+                            <input type="text" name="apellido" id="apellido" placeholder="ingrese su apellido">
+                        </div>
+                        <div class="d-flex flex-column p-1">
+                            <label for="telefono">TELEFONO - CELULAR</label>
+                            <input type="number" name="telefono" id="telefono" placeholder="fijo o celular" required>
+                        </div>
+                        <div class="d-flex flex-column p-1">
+                            <label for="documento">TIPO DE DOCUMENTO</label>
+                            <select name="documento">
+                                <option value="cedula">nro. de cédula</option>
+                                <option value="dni">DNI</option>
+                                <option value="pasaporte">pasaporte</option>
+                                <option value="otro">otro</option>
+                            </select>
+                            <input type="number" name="documento" id="documento" placeholder="ingrese su nro. de documento" required>
+                        </div>
+                        <div class="d-flex flex-column p-1">
+                            <label for="email">CORREO ELECTRONICO:</label>
+                            <input type="email" name="mail" id="mail" placeholder="ingrese su correo electronico" required>
+                        </div>
+                        <fieldset class="d-flex flex-column p-1">
                             <label for="genero">GENERO</label>
                             <div>
                                 <label for="genero">Hombre</label>
@@ -95,16 +100,16 @@
                             </div>
                         </fieldset>
                         
-                        <div>
+                        <div class="d-flex flex-column p-1">
                             <label for="Seleccion">Selecciona el equipo al que quieres unirte</label>
                             <select name="Seleccion">
                                 <option value="Barbarians">Barbarians</option>
                                 <option value="Valkirias">Valkirias</option>
                             </select>
                         </div>
-                        
-                        <textarea name="comentarios" id="" cols="30" rows="10" placeholder="contanos que querés saber, en que te podemos ayudar" ></textarea>
-                        
+                        <div class="d-flex flex-column p-2">
+                            <textarea name="comentarios" id="" cols="30" rows="10" placeholder="contanos que querés saber, en que te podemos ayudar" ></textarea>
+                        </div>
                         <div>
                             <label for="acepta terminos y condiciones"> Acepta terminos y condiciones </label>
                             <input type="checkbox" name="acepto" value="si" required>
