@@ -41,6 +41,7 @@ btnUsuario.addEventListener('click', () => {
             if (usuario.iniciado == true) {
             usuario.iniciado=false;
         }});
+        
         check = true;
     };
 
