@@ -111,7 +111,7 @@ function renderProductos(){
                 <div class="card-body">
                     <h4 class="card-title">${p.nombre}</h4>
                     <p class="card-text">Talles $${p.precio} .</p>
-                    <button class="btn btnForm" id= "${p.id}">Añadir al carrito</button>
+                    <button class="btn btnForm " id= "${p.id}">Añadir al carrito</button>
                 </div>
             </div>
         `;
@@ -156,13 +156,19 @@ function renderCarrito(){
         let producto = d.createElement('div');
         producto.classList.add('card');
         producto.innerHTML = `
-            <div class="card m-2" style="width: 18rem;">
-                <img src="${p.img}" class="card-img-top">
-                <div class="card-body">
-                    <h4 class="card-title">${p.nombre}</h4>
-                    <p class="card-text">Talles $${p.precio}</p>
-                    <p class="card-text">Cantidad ${p.cantidad}</p>
-                    <button class="btn btnForm" id= "${p.id}">Eliminar</button>
+            <div class="card p-1" style="max-width: 540px;">
+                <div class="row g-0">
+                    <div class="col-md-4">
+                        <img src="${p.img}" class="img-fluid rounded-start">
+                    </div>
+                    <div class="col-md-8">
+                        <div class="card-body">
+                            <h4 class="card-title">${p.nombre}</h4>
+                            <p class="card-text">Precio $${p.precio}</p>
+                            <p class="card-text">Cantidad ${p.cantidad}</p>
+                            <button class="btn btnForm" id= "${p.id}">Eliminar</button>
+                        </div>
+                    </div>
                 </div>
             </div>
         `;
@@ -204,3 +210,5 @@ function precioFinal(){
     const pagar = d.getElementById('totalPagar');
     pagar.innerHTML=`<h4>Total a Pagar: $${precioFinal}</h4>`;
 }
+
+
