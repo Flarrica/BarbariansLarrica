@@ -61,7 +61,7 @@
                     <h3>COMPLETA EL FORMULARIO QUE TE CONTACTAMOS</h3>
                 </div>
                 <div class="cajaFormulario row p-3 align-items-center justify-content-center">
-                    <form action="" method="get" class="row col-12 p-1 align-items-center justify-content-center">
+                    <form action="" method="get" class="row col-12 p-1 align-items-center justify-content-center" id="formulario">
                         <div class="d-flex flex-column p-1">
                             <label for="nombre">NOMBRE</label>
                             <input type="text" name="NOMBRE" id="nombre" placeholder="ingrese su nombre" required>
@@ -76,13 +76,13 @@
                         </div>
                         <div class="d-flex flex-column p-1">
                             <label for="documento">TIPO DE DOCUMENTO</label>
-                            <select name="documento">
+                            <select name="documento" id="documento1">
                                 <option value="cedula">nro. de cédula</option>
                                 <option value="dni">DNI</option>
                                 <option value="pasaporte">pasaporte</option>
                                 <option value="otro">otro</option>
                             </select>
-                            <input type="number" name="documento" id="documento" placeholder="ingrese su nro. de documento" required>
+                            <input type="number" name="documento" id="documento2" placeholder="ingrese su nro. de documento" required>
                         </div>
                         <div class="d-flex flex-column p-1">
                             <label for="email">CORREO ELECTRONICO:</label>
@@ -108,7 +108,7 @@
                             </select>
                         </div>
                         <div class="d-flex flex-column p-2">
-                            <textarea name="comentarios" id="" cols="30" rows="10" placeholder="contanos que querés saber, en que te podemos ayudar" ></textarea>
+                            <textarea name="comentarios" id="text-area" cols="30" rows="10" placeholder="contanos que querés saber, en que te podemos ayudar" ></textarea>
                         </div>
                         <div>
                             <label for="acepta terminos y condiciones"> Acepta terminos y condiciones </label>
@@ -131,6 +131,7 @@
     <footer class="sticky-bottom p-1">
         <h4>© FERBI 2022, Todos los derechos reservados.</h4>
     </footer>
+<script src="../js/contacto.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
         AOS.init();

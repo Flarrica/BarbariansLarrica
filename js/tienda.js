@@ -136,10 +136,12 @@ function agregarCompraCarrito(id){
     if (productosEnCarrito) {
         
         productosEnCarrito.cantidad++;
+        alert(`Se cambio la cantidad de ${producto.nombre} a ${producto.cantidad}`)
 
     }else {
         producto.cantidad = 1;
         carrito.push(producto);
+        alert('Se agregó correctamente el producto')
     }
 
     renderCarrito();

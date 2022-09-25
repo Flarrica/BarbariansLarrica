@@ -40,7 +40,7 @@ const jugadores = [
         nombre: 'Felipe Poggio',
         posicion: 'Head Coach',
         img: '../assets/img/HeadCouch.jpg'
-    }
+    },
 ];
 const jugadoresMVP = [
 
