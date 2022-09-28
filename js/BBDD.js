@@ -132,3 +132,37 @@ const trofeos = [
         img: '../assets/img/trofeoClausura2016.jpeg'
     },
 ];
+
+const partidos = [
+    {
+        id: 1,
+        nombre: '15/06/2022',
+        src: 'https://www.youtube.com/embed/3Hc9SP9ecN8'
+    },
+    {
+        id: 2,
+        nombre: '15/01/2022',
+        src: 'https://www.youtube.com/embed/zNerZjv6quY'
+    },
+    {
+        id: 3,
+        nombre: '15/02/2022<',
+        src: 'https://www.youtube.com/embed/nTFIOZpsa2k'
+    },
+    {
+        id: 4,
+        nombre: '15/03/2022',
+        src: 'https://www.youtube.com/embed/WU_spsV-hj0'
+    },
+    {
+        id: 5,
+        nombre: '15/04/2022',
+        src: 'https://www.youtube.com/embed/r0aDINJaMJU'
+    },
+    {
+        id: 6,
+        nombre: '18/09/2021',
+        src: 'https://www.youtube.com/embed/BazZ3MkpVEk'
+    }
+];
+
