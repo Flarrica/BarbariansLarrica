@@ -146,7 +146,7 @@ const partidos = [
     },
     {
         id: 3,
-        nombre: '15/02/2022<',
+        nombre: '15/02/2022',
         src: 'https://www.youtube.com/embed/nTFIOZpsa2k'
     },
     {
