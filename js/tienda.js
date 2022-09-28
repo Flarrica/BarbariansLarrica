@@ -82,30 +82,11 @@ function renderProductos(){
             
         })
     })
+    
+    renderCarrito();
 };
 
 renderProductos();
-
-function agregarCompraCarrito(id){
-
-    let producto = BBDD.find(producto => producto.id === id);
-
-    let productosEnCarrito = carrito.find(producto => producto.id === id);
-
-    if (productosEnCarrito) {
-        
-        productosEnCarrito.cantidad++;
-        alert(`Se cambio la cantidad de ${producto.nombre} a ${producto.cantidad}`)
-
-    }else {
-        producto.cantidad = 1;
-        carrito.push(producto);
-        alert('Se agregó correctamente el producto')
-    }
-
-    renderCarrito();
-    precioFinal();
-};
 
 function renderCarrito(){
 
@@ -113,7 +94,9 @@ function renderCarrito(){
     
     carritoHTML.innerHTML='';
 
-    carrito.forEach((p , index)=>{
+    const storage = JSON.parse(localStorage.getItem('carritoStore'));
+
+    storage.forEach((p , index)=>{
         let producto = d.createElement('div');
         producto.classList.add('card');
         producto.innerHTML = `
@@ -141,10 +124,33 @@ function renderCarrito(){
         });
 
         carritoHTML.appendChild(producto);
-
     })
 
 }
+
+function agregarCompraCarrito(id){
+
+
+    let producto = BBDD.find(producto => producto.id === id);
+    
+    let productosEnCarrito = carrito.find(producto => producto.id === id);
+    console.log(producto);
+    if (productosEnCarrito) {
+        
+        productosEnCarrito.cantidad++;
+
+    }else {
+        producto.cantidad = 1;
+        carrito.push(producto);
+    }
+
+    guardarCarritoLocalStorage();
+    renderCarrito();
+    precioFinal();
+    
+};
+
+
 
 function eliminarProductoCarrito(indice){
 
@@ -156,7 +162,8 @@ function eliminarProductoCarrito(indice){
         
     };
 
-    renderCarrito();
+    guardarCarritoLocalStorage();
+    renderCarrito(); 
     precioFinal();
 }
 
@@ -173,3 +180,13 @@ function precioFinal(){
 }
 
 
+function ObtenerCarritoLocalStorage(){
+    const storage = JSON.parse(localStorage.getItem('carritoStore'));
+    return storage;
+
+    
+};
+
+function guardarCarritoLocalStorage(){
+    localStorage.setItem('carritoStore',JSON.stringify(carrito));
+};
