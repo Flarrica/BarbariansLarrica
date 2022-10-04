@@ -54,6 +54,18 @@ btnUsuario.addEventListener('click', () => {
 
 
 const carrito = [];
+cargarStorage();
+
+
+function cargarStorage(){
+
+    const storage = JSON.parse(localStorage.getItem('carritoStore'));
+    storage.forEach((p) =>{
+        carrito.push(p);
+    });
+    precioFinal();
+};
+
 
 function renderProductos(){
 
@@ -124,8 +136,7 @@ function renderCarrito(){
         });
 
         carritoHTML.appendChild(producto);
-    })
-
+    });
 }
 
 function agregarCompraCarrito(id){
@@ -170,22 +181,16 @@ function eliminarProductoCarrito(indice){
 function precioFinal(){
 
     let precioFinal = 0;
+    let cantidadArticulos = 0;
     carrito.forEach((p)=>{
 
         precioFinal += p.precio * p.cantidad;
+        cantidadArticulos += p.cantidad;
 
     });
     const pagar = d.getElementById('totalPagar');
-    pagar.innerHTML=`<h4>Total a Pagar: $${precioFinal}</h4>`;
+    pagar.innerHTML=`<h4>C. Articulos: ${cantidadArticulos} Total a Pagar: $${precioFinal}</h4>`;
 }
-
-
-function ObtenerCarritoLocalStorage(){
-    const storage = JSON.parse(localStorage.getItem('carritoStore'));
-    return storage;
-
-    
-};
 
 function guardarCarritoLocalStorage(){
     localStorage.setItem('carritoStore',JSON.stringify(carrito));
