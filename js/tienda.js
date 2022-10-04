@@ -2,10 +2,10 @@
 const d = document;
 
 class Usuario {
-    constructor(nombre,contraseña,iniciado){
+    constructor(nombre,apellido){
         this.nombre = nombre.toUpperCase();
-        this.contraseña = contraseña;
-        this.iniciado = iniciado;
+        this.apellido = apellido.toUpperCase();
+        this.iniciado = true;
     }
 }
 const usuarios = [];
@@ -20,15 +20,16 @@ btnUsuario.addEventListener('click', () => {
         usuario.iniciado && (check = false);
     });
     if (check) {
-        const nombre = prompt('Ingrese Nombre de usuario: ');
-        const contraseña = prompt('Ingrese contraseña: ');
-        const nuevoUsuario = new Usuario(nombre,contraseña,true);
+        const nombre1 = prompt('Ingrese Nombre de usuario: ');
+        const apellido1 = prompt('Ingrese su apellido: ');
+        const nuevoUsuario = new Usuario(nombre1,apellido1);
         usuarios.push(nuevoUsuario);
 
-        console.log(usuarios);
+        console.log(...nuevoUsuario);
 
         let name = d.querySelector('.usuario');
-        name.textContent = nombre;
+        const {nombre,apellido}=usuarios;
+        name.textContent = nombre + '' + apellido;
         let cerrarSesion = d.querySelector('.ingresarUsuario');
         cerrarSesion.innerHTML = 'Cerrar Sessión';
     }else {
@@ -73,17 +74,17 @@ function renderProductos(){
     const stock = d.getElementById('mercaderia');
 
     BBDD.forEach((p) =>{
-
+        const {img,nombre,precio,id}=p;
         let producto = d.createElement('div');
         producto.classList.add('col-12','col-md-3','mb-5', 'd-flex','justify-content-center');
 
         producto.innerHTML = `
             <div class="card m-2" style="width: 18rem;">
-                <img src="${p.img}" class="card-img-top">
+                <img src="${img}" class="card-img-top">
                 <div class="card-body">
-                    <h4 class="card-title">${p.nombre}</h4>
-                    <p class="card-text">Talles $${p.precio} .</p>
-                    <button class="btn btnForm " id= "${p.id}">Añadir al carrito</button>
+                    <h4 class="card-title">${nombre}</h4>
+                    <p class="card-text">Talles $${precio} .</p>
+                    <button class="btn btnForm " id= "${id}">Añadir al carrito</button>
                 </div>
             </div>
         `;
@@ -91,7 +92,7 @@ function renderProductos(){
 
         producto.querySelector('button').addEventListener('click', ()=>{
         
-            agregarCompraCarrito(p.id);
+            agregarCompraCarrito(id);
             
         })
     })
@@ -182,10 +183,9 @@ function precioFinal(){
     let cantidadArticulos = 0;
     
     carrito.forEach((p)=>{
-
-        precioFinal += p.precio * p.cantidad;
-        cantidadArticulos += p.cantidad;
-
+        const {precio,cantidad}= p;
+        precioFinal += precio * cantidad;
+        cantidadArticulos += cantidad;
     });
     const pagar = d.getElementById('totalPagar');
     pagar.innerHTML=`<h4>C/Articulos: ${cantidadArticulos} Total: $${precioFinal}</h4>`;
@@ -194,3 +194,5 @@ function precioFinal(){
 function guardarCarritoLocalStorage(){
     localStorage.setItem('carritoStore',JSON.stringify(carrito));
 };
+
+
