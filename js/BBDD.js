@@ -5,6 +5,7 @@ const BBDD = [
         precio: 200,
         img: '../assets/img/GorroN.jpg',
         cantidad: 0,
+        stock: 5,
         talles: false
     },
     {
@@ -13,6 +14,7 @@ const BBDD = [
         precio: 200,
         img: '../assets/img/GorroV.jpg',
         cantidad: 0,
+        stock: 5,
         talles: false
     },
     {
@@ -21,6 +23,7 @@ const BBDD = [
         precio: 250,
         img: '../assets/img/RemeraG.jpg',
         cantidad: 0,
+        stock: 5,
         talles: true
     },
     {
@@ -29,6 +32,7 @@ const BBDD = [
         precio: 500,
         img: '../assets/img/CanguroG.jpg',
         cantidad: 0,
+        stock: 5,
         talles: true
     },
     {
@@ -37,6 +41,7 @@ const BBDD = [
         precio: 300,
         img: '../assets/img/RemeraFlag.jpg',
         cantidad: 0,
+        stock: 5,
         talles: true
     },
 ];

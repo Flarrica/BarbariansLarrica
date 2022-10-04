@@ -17,9 +17,7 @@ btnUsuario.addEventListener('click', () => {
     let check = true;
 
     usuarios.forEach(usuario =>{
-        if (usuario.iniciado == true) {
-            check=false;
-        }
+        usuario.iniciado == true && (check = false);
     });
     if (check) {
         const nombre = prompt('Ingrese Nombre de usuario: ');
@@ -54,16 +52,20 @@ btnUsuario.addEventListener('click', () => {
 
 
 const carrito = [];
+
 cargarStorage();
 
 
 function cargarStorage(){
+    if (localStorage.getItem('carritoStore')) {
 
     const storage = JSON.parse(localStorage.getItem('carritoStore'));
-    storage.forEach((p) =>{
-        carrito.push(p);
-    });
-    precioFinal();
+        storage.forEach((p) =>{
+            carrito.push(p);
+        });
+        precioFinal();
+    }
+    
 };
 
 
@@ -107,37 +109,37 @@ function renderCarrito(){
     carritoHTML.innerHTML='';
 
     const storage = JSON.parse(localStorage.getItem('carritoStore'));
-
-    storage.forEach((p , index)=>{
-        let producto = d.createElement('div');
-        producto.classList.add('card');
-        producto.innerHTML = `
-            <div class="card p-1" style="max-width: 540px;">
-                <div class="row g-0">
-                    <div class="col-md-4">
-                        <img src="${p.img}" class="img-fluid rounded-start">
-                    </div>
-                    <div class="col-md-8">
-                        <div class="card-body">
-                            <h4 class="card-title">${p.nombre}</h4>
-                            <p class="card-text">Precio $${p.precio}</p>
-                            <p class="card-text">Cantidad ${p.cantidad}</p>
-                            <button class="btn btnForm" id= "${p.id}">Eliminar</button>
+    if (localStorage.getItem('carritoStore')) {
+        storage.forEach((p , index)=>{
+            let producto = d.createElement('div');
+            producto.classList.add('card');
+            producto.innerHTML = `
+                <div class="card p-1" style="max-width: 540px;">
+                    <div class="row g-0">
+                        <div class="col-md-4">
+                            <img src="${p.img}" class="img-fluid rounded-start">
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <h4 class="card-title">${p.nombre}</h4>
+                                <p class="card-text">Precio $${p.precio}</p>
+                                <p class="card-text">Cantidad ${p.cantidad}</p>
+                                <button class="btn btnForm" id= "${p.id}">Eliminar</button>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-        `;
+            `;
 
-        producto.querySelector('button').addEventListener('click',()=>{
+            producto.querySelector('button').addEventListener('click',()=>{
 
-            eliminarProductoCarrito(index);
+                eliminarProductoCarrito(index);
 
+            });
+
+            carritoHTML.appendChild(producto);
         });
-
-        carritoHTML.appendChild(producto);
-    });
-}
+    }}
 
 function agregarCompraCarrito(id){
 
@@ -146,12 +148,13 @@ function agregarCompraCarrito(id){
     
     let productosEnCarrito = carrito.find(producto => producto.id === id);
     console.log(producto);
+    
     if (productosEnCarrito) {
         
         productosEnCarrito.cantidad++;
 
-    }else {
-        producto.cantidad = 1;
+    }else{
+        producto.cantidad = 1
         carrito.push(producto);
     }
 
@@ -167,11 +170,7 @@ function eliminarProductoCarrito(indice){
 
     carrito[indice].cantidad--;
 
-    if (carrito[indice].cantidad === 0) {
-
-        carrito.splice(indice,1);
-        
-    };
+    carrito[indice].cantidad === 0 && carrito.splice(indice,1);
 
     guardarCarritoLocalStorage();
     renderCarrito(); 
@@ -189,7 +188,7 @@ function precioFinal(){
 
     });
     const pagar = d.getElementById('totalPagar');
-    pagar.innerHTML=`<h4>C. Articulos: ${cantidadArticulos} Total a Pagar: $${precioFinal}</h4>`;
+    pagar.innerHTML=`<h4>C/Articulos: ${cantidadArticulos} Total: $${precioFinal}</h4>`;
 }
 
 function guardarCarritoLocalStorage(){
