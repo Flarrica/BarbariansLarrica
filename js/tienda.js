@@ -17,7 +17,7 @@ btnUsuario.addEventListener('click', () => {
     let check = true;
 
     usuarios.forEach(usuario =>{
-        usuario.iniciado == true && (check = false);
+        usuario.iniciado && (check = false);
     });
     if (check) {
         const nombre = prompt('Ingrese Nombre de usuario: ');
@@ -31,15 +31,14 @@ btnUsuario.addEventListener('click', () => {
         name.textContent = nombre;
         let cerrarSesion = d.querySelector('.ingresarUsuario');
         cerrarSesion.innerHTML = 'Cerrar Sessión';
-    }else if (check == false){
+    }else {
         let name = d.querySelector('.usuario');
         name.textContent = '';
         let cerrarSesion = d.querySelector('.ingresarUsuario');
         cerrarSesion.innerHTML = 'Iniciar Sesión';    
         usuarios.forEach(usuario =>{
-            if (usuario.iniciado == true) {
-            usuario.iniciado=false;
-        }});
+            usuario.iniciado && (usuario.iniciado=false)
+        });
         
         check = true;
     };
@@ -109,7 +108,7 @@ function renderCarrito(){
     carritoHTML.innerHTML='';
 
     const storage = JSON.parse(localStorage.getItem('carritoStore'));
-    if (localStorage.getItem('carritoStore')) {
+    if (localStorage?.getItem('carritoStore') || false) {
         storage.forEach((p , index)=>{
             let producto = d.createElement('div');
             producto.classList.add('card');
@@ -181,6 +180,7 @@ function precioFinal(){
 
     let precioFinal = 0;
     let cantidadArticulos = 0;
+    
     carrito.forEach((p)=>{
 
         precioFinal += p.precio * p.cantidad;
