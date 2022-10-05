@@ -23,9 +23,14 @@ btnUsuario.addEventListener('click', () => {
         const nombre1 = prompt('Ingrese Nombre de usuario: ');
         const apellido1 = prompt('Ingrese su apellido: ');
         const nuevoUsuario = new Usuario(nombre1,apellido1);
-        usuarios.push(nuevoUsuario);
+        const nuevoUsuario2 = {
+            ...nuevoUsuario,
+            contraseña: prompt('Ingrese Contraseña: '),
+            email: prompt('Ingrese email: ')
+        };
 
-        console.log(...nuevoUsuario);
+        console.log(nuevoUsuario2);
+        usuarios.push(nuevoUsuario2);
 
         let name = d.querySelector('.usuario');
         const {nombre,apellido}=usuarios;
@@ -59,7 +64,7 @@ cargarStorage();
 function cargarStorage(){
     if (localStorage.getItem('carritoStore')) {
 
-    const storage = JSON.parse(localStorage.getItem('carritoStore'));
+        const storage = JSON.parse(localStorage.getItem('carritoStore'));
         storage.forEach((p) =>{
             carrito.push(p);
         });
