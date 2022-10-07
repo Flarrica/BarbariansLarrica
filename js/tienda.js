@@ -58,29 +58,33 @@ btnUsuario.addEventListener('click', () => {
         let name = d.querySelector('.usuario');
 
         Swal.fire({
-            title: 'Are you sure?',
-            text: "You won't be able to revert this!",
+            title: 'Estas seguro de cerrar sesión?',
+            text: "No te pierdas nuestros productos!",
             icon: 'warning',
             showCancelButton: true,
-            confirmButtonColor: '#3085d6',
-            cancelButtonColor: '#d33',
-            confirmButtonText: 'Yes, delete it!'
+            confirmButtonColor: '#008000',
+            confirmButtonText: '#ffffff',
+            cancelButtonColor: '#ff0000',
+            confirmButtonText: 'Si, cerrar!'
         }).then((result) => {
             if (result.isConfirmed) {
                 Swal.fire(
-                'Deleted!',
-                'Your file has been deleted.',
+                'Cerraste sesión!',
+                'Nos vemos pronto.',
                 'success'
-                )
+                );
+                name.textContent = '';
+                let cerrarSesion = d.querySelector('.ingresarUsuario');
+                cerrarSesion.innerHTML = 'Iniciar Sesión';    
+                usuarios.forEach(usuario =>{
+                    usuario.iniciado && (usuario.iniciado=false)
+        });
+            }else{
+                
             }
         });
 
-        name.textContent = '';
-        let cerrarSesion = d.querySelector('.ingresarUsuario');
-        cerrarSesion.innerHTML = 'Iniciar Sesión';    
-        usuarios.forEach(usuario =>{
-            usuario.iniciado && (usuario.iniciado=false)
-        });
+        
         
         check = true;
     };
@@ -133,13 +137,18 @@ function renderProductos(){
 
         producto.querySelector('button').addEventListener('click', ()=>{
             
-            Swal.fire({
-                position: 'top-end',
-                icon: 'success',
-                title: `${nombre} se ha agregado a su carrito`,
-                showConfirmButton: false,
-                timer: 1000
-            });
+            Toastify({
+                text: `Se ha agregado ${nombre} al carrito!`,
+                duration: 1000,
+                gravity: 'bottom',
+                position: 'right',
+                style:{
+                    background: '#ffffff',
+                    color: '#008000',
+                    border: '2px solid #008000'
+                }
+
+            }).showToast();
 
             agregarCompraCarrito(id);
             
@@ -220,23 +229,25 @@ function eliminarProductoCarrito(indice){
     carrito[indice].cantidad--;
     if (carrito[indice].cantidad === 0) {
         Swal.fire({
-            title: 'Are you sure?',
-            text: "You won't be able to revert this!",
+            title: 'Esta seguro de eliminarlo?',
+            text: `Se borrará del carrito ${carrito[indice].nombre}!`,
             icon: 'warning',
             showCancelButton: true,
-            confirmButtonColor: '#3085d6',
+            confirmButtonColor: '#008000',
             cancelButtonColor: '#d33',
-            confirmButtonText: 'Yes, delete it!'
+            confirmButtonText: 'Si, eliminalo!'
         }).then((result) => {
             if (result.isConfirmed) {
                 carrito.splice(indice,1);
                 guardarCarritoLocalStorage();
                 renderCarrito(); 
                 precioFinal();
-                Swal.fire(
-                    'Eliminado!',
-                    'success'
-                )
+                Swal.fire({
+                    icon: 'success',
+                    title: 'Eliminado del carrito!',
+                    showConfirmButton: false,
+                    timer: 1000
+                })
             }else {
                 carrito[indice].cantidad++;
                 guardarCarritoLocalStorage();
