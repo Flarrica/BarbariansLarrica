@@ -117,44 +117,46 @@ function cargarStorage(){
 function renderProductos(){
 
     const stock = d.getElementById('mercaderia');
+    fetch('../js/BBDD.json')
+        .then((response)=> response.json())
+        .then((data)=>{
+            data.forEach((p) =>{
+                const {img,nombre,precio,id}=p;
+                let producto = d.createElement('div');
+                producto.classList.add('col-12','col-md-3','mb-5', 'd-flex','justify-content-center');
 
-    BBDD.forEach((p) =>{
-        const {img,nombre,precio,id}=p;
-        let producto = d.createElement('div');
-        producto.classList.add('col-12','col-md-3','mb-5', 'd-flex','justify-content-center');
+                producto.innerHTML = `
+                    <div class="card m-2" style="width: 18rem;">
+                        <img src="${img}" class="card-img-top">
+                        <div class="card-body">
+                            <h4 class="card-title">${nombre}</h4>
+                            <p class="card-text">Talles $${precio} .</p>
+                            <button class="btn btnForm " id= "${id}">Añadir al carrito</button>
+                        </div>
+                    </div>
+                    `;
+                stock.appendChild(producto);
 
-        producto.innerHTML = `
-            <div class="card m-2" style="width: 18rem;">
-                <img src="${img}" class="card-img-top">
-                <div class="card-body">
-                    <h4 class="card-title">${nombre}</h4>
-                    <p class="card-text">Talles $${precio} .</p>
-                    <button class="btn btnForm " id= "${id}">Añadir al carrito</button>
-                </div>
-            </div>
-        `;
-        stock.appendChild(producto);
-
-        producto.querySelector('button').addEventListener('click', ()=>{
+                producto.querySelector('button').addEventListener('click', ()=>{
             
-            Toastify({
-                text: `Se ha agregado ${nombre} al carrito!`,
-                duration: 1000,
-                gravity: 'bottom',
-                position: 'right',
-                style:{
-                    background: '#ffffff',
-                    color: '#008000',
-                    border: '2px solid #008000'
-                }
+                    Toastify({
+                        text: `Se ha agregado ${nombre} al carrito!`,
+                        duration: 1000,
+                        gravity: 'bottom',
+                        position: 'right',
+                        style:{
+                            background: '#ffffff',
+                            color: '#008000',
+                            border: '2px solid #008000'
+                        }
 
-            }).showToast();
+                    }).showToast();
 
-            agregarCompraCarrito(id);
+                    agregarCompraCarrito(id);
             
-        })
+                })
+            })
     })
-    
     renderCarrito();
 };
 

@@ -1,0 +1,47 @@
+[
+    {
+        "id": 1,
+        "nombre": "Gorra Negra",
+        "precio": 200,
+        "img": "../assets/img/GorroN.jpg",
+        "cantidad": 0,
+        "stock": 5,
+        "talles": false
+    },
+    {
+        "id": 2,
+        "nombre": "Gorra Verde",
+        "precio": 200,
+        "img": "../assets/img/GorroV.jpg",
+        "cantidad": 0,
+        "stock": 5,
+        "talles": false
+    },
+    {
+        "id": 3,
+        "nombre": "Remera Gris",
+        "precio": 250,
+        "img": "../assets/img/RemeraG.jpg",
+        "cantidad": 0,
+        "stock": 5,
+        "talles": true
+    },
+    {
+        "id": 4,
+        "nombre": "Canguro Gris",
+        "precio": 500,
+        "img": "../assets/img/CanguroG.jpg",
+        "cantidad": 0,
+        "stock": 5,
+        "talles": true
+    },
+    {
+        "id": 5,
+        "nombre": "Remera Flag",
+        "precio": 300,
+        "img": "../assets/img/RemeraFlag.jpg",
+        "cantidad": 0,
+        "stock": 5,
+        "talles": true
+    }
+]
