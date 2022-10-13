@@ -1,0 +1,50 @@
+[
+    {
+        "id": 1,
+        "numero": 38,
+        "nombre": "Fernando Larrica",
+        "posicion": "CT/NT/FB/LB/QB",
+        "img": "../assets/img/FernandoLarrica.jpg",
+        "mvp": false
+    },
+    {
+        "id": 2,
+        "numero": 6,
+        "nombre": "Fabian Hernandez",
+        "posicion": "SS",
+        "img": "../assets/img/MVP4.jpg",
+        "mvp": true
+    },
+    {
+        "id": 3,
+        "numero": 85,
+        "nombre": "Gabriel Sanchez",
+        "posicion": "WR",
+        "img": "../assets/img/MVP3.jpeg",
+        "mvp": true
+    },
+    {
+        "id": 4,
+        "numero": 26,
+        "nombre": "Luciano Guillen",
+        "posicion": "RB",
+        "img": "../assets/img/MVP1.jpg",
+        "mvp": true
+    },
+    {
+        "id": 5,
+        "numero": 2,
+        "nombre": "Carlos Daniel",
+        "posicion": "RB",
+        "img": "../assets/img/MVP2.jpg",
+        "mvp": true
+    },
+    {
+        "id": 6,
+        "numero": 1,
+        "nombre": "Felipe Poggio",
+        "posicion": "Head Coach",
+        "img": "../assets/img/HeadCouch.jpg",
+        "mvp": false
+    }
+]

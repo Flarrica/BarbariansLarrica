@@ -1,7 +1,7 @@
 const d= document;
 
 const formularios = d.getElementById('formulario');
-console.log(formularios);
+
 formularios.addEventListener('submit',(e) =>{
     
     e.preventDefault();
@@ -20,6 +20,5 @@ formularios.addEventListener('submit',(e) =>{
         email, 
         textArea
     }
-    console.log(datos);
     formularios.reset();
 });
