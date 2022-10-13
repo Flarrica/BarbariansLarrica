@@ -201,10 +201,12 @@ function renderCarrito(){
         });
     }}
 
-function agregarCompraCarrito(id){
+async function agregarCompraCarrito(id){
 
+    const response = await fetch('../js/json/BBDD.json');
+    const data = await response.json();
 
-    let producto = BBDD.find(producto => producto.id === id);
+    let producto = data.find(producto => producto.id === id);
     
     let productosEnCarrito = carrito.find(producto => producto.id === id);
     console.log(producto);
