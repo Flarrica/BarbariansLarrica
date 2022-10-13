@@ -285,4 +285,50 @@ function guardarCarritoLocalStorage(){
     localStorage.setItem('carritoStore',JSON.stringify(carrito));
 };
 
+// mandar al servidor la compra del usuario
 
+const terminarCompra = d.getElementById('finalizarCompra');
+
+terminarCompra.addEventListener('click', () => {
+
+    const swalWithBootstrapButtons = Swal.mixin({
+        customClass: {
+            confirmButton: 'btn btn-success',
+            cancelButton: 'btn btn-danger'
+        },
+        buttonsStyling: false
+    })
+    
+    swalWithBootstrapButtons.fire({
+        title: 'Desea finalizar la compra?',
+        icon: 'warning',
+        showCancelButton: true,
+        confirmButtonText: 'Si, finalizar!',
+        cancelButtonText: 'No, seguir!',
+        reverseButtons: true
+    }).then((result) => {
+        if (result.isConfirmed) {
+
+            const enviarCompra = localStorage.getItem('carritoStore') || [];
+            console.log(enviarCompra);
+            //enviar enviarCompra a carrito.json
+
+            swalWithBootstrapButtons.fire(
+                'Comprado!',
+                'Muchas gracias por apoyarnos!',
+                'success'
+            )
+        } else if (
+          /* Read more about handling dismissals below */
+            result.dismiss === Swal.DismissReason.cancel
+        ) {
+
+
+            swalWithBootstrapButtons.fire(
+                'Cancelado',
+                'Puede seguir comprando :)',
+                'error'
+            )
+        }
+    })
+});
